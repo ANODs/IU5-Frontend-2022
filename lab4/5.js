@@ -12,9 +12,9 @@
 
  function checkBrackets(str) {
     while(str.includes('<>') || str.includes('()') || str.includes('[]')){
-        str = str.replaceAll('<>','');
-        str = str.replaceAll('()','');
-        str = str.replaceAll('[]','');
+        str = str.replace('<>','');
+        str = str.replace('()','');
+        str = str.replace('[]','');
     }
     return !str;
 }
