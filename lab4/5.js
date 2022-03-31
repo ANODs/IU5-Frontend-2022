@@ -10,8 +10,13 @@
  * [(<>)] --> true
  */
 
-function checkBrackets(str) {
-    //code here
+ function checkBrackets(str) {
+    while(str.includes('<>') || str.includes('()') || str.includes('[]')){
+        str = str.replaceAll('<>','');
+        str = str.replaceAll('()','');
+        str = str.replaceAll('[]','');
+    }
+    return !str;
 }
 
 module.exports = checkBrackets;
