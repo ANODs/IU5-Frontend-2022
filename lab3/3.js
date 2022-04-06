@@ -10,7 +10,7 @@
 function multiplyArray(arr, n) {
     let n_arr = arr;
     for (let i in n_arr) {
-        if(typeof(n_arr[i])==typeof(2)) n_arr[i]*= 2;
+        if(typeof(n_arr[i])=='number') n_arr[i]*= 2;
     }
     return n_arr;
 }
