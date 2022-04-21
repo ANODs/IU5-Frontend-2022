@@ -12,9 +12,17 @@
  * memozedAdd(2) -> {cache: false, result: 4}
  * memozedAdd(2) -> {cache: true, result: 4}
  */
-
-function memoize(func) {
-    //code here
+/*It just works!*/
+ function memoize(func) {
+    let result
+    return (...args) => {
+        cache = true;
+        if (result != func(...args)) {
+            result = func(...args);
+            cache = false;
+        }
+        return { 'cache': cache, 'result': result }
+    }
 }
 
 module.exports = memoize;

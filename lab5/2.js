@@ -12,8 +12,11 @@
  * console.log(curry(add)(1)(2, 3)); //6
  * console.log(curry(add)(1, 2, 3)); //6
  */
-function curry(f) {
-    //code here
+
+ function curry(f) {
+    return joiner = (...args) => {
+        return (args.length < f.length) ? joiner.bind(null, ...args) : f(...args);
+    }
 }
 
 module.exports = curry;
